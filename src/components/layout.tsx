@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react'
-import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import Header from './header'
 
 const Layout = ({ children }: PropsWithChildren) => {
@@ -16,7 +16,7 @@ const Layout = ({ children }: PropsWithChildren) => {
                     </p>
                     <div className="flex justify-center space-x-6 sm:space-x-10">
                         <a
-                            href="https://github.com/AurelLP-WEB"
+                            href="https://github.com/Alishabot"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition duration-300 ease-in-out transform hover:scale-110"
@@ -24,20 +24,12 @@ const Layout = ({ children }: PropsWithChildren) => {
                             <FaGithub size={24} />
                         </a>
                         <a
-                            href="www.linkedin.com/in/aurel-craciun-0b87791a1"
+                            href="https://www.linkedin.com/in/voicu-simona-daniela-a7a5b499"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition duration-300 ease-in-out transform hover:scale-110"
                         >
                             <FaLinkedin size={24} />
-                        </a>
-                        <a
-                            href="https://www.facebook.com/AurelCraciun99"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition duration-300 ease-in-out transform hover:scale-110"
-                        >
-                            <FaFacebook size={24} />
                         </a>
                     </div>
                     <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-4">
