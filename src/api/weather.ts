@@ -16,13 +16,24 @@ class WeatherAPI {
   }
 
   private async fetchData<T>(url: string): Promise<T> {
-    const response = await fetch(url);
+    console.log('Fetching URL:', url); // Debug log
+    
+    try {
+      const response = await fetch(url);
 
-    if (!response.ok) {
-      throw new Error(`Weather API Error: ${response.statusText}`);
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('API Error:', response.status, response.statusText, errorText);
+        throw new Error(`Weather API Error: ${response.status} ${response.statusText} - ${errorText}`);
+      }
+
+      const data = await response.json();
+      console.log('API Response:', data); // Debug log
+      return data;
+    } catch (error) {
+      console.error('Fetch error:', error);
+      throw error;
     }
-
-    return response.json();
   }
 
   async getCurrentWeather({ lat, lon }: Coordinates): Promise<WeatherData> {
